@@ -1,0 +1,719 @@
+/* ============================================================
+   STACKLY — About page (Figma frame "about" 1440 × 7052)
+   Desktop = exact 1440 canvas  →  ≤1200 = reflowed
+   ============================================================ */
+
+.ab-main {
+  position: relative;
+  height: 6622px;               /* footer starts at y6622 */
+}
+
+/* desktop: sections are transparent wrappers, children position on <main> */
+.ab-sec { display: contents; }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.ab-hero-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 805px;
+  object-fit: cover;
+  max-width: none;
+}
+.ab-hero-title {
+  position: absolute;
+  left: 319px;
+  top: 215px;
+  width: 935px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 108.4px;
+  color: #fff;
+}
+.ab-hero-sub {
+  position: absolute;
+  left: 152px;
+  top: 445px;
+  width: 1199px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 72px;
+  color: #fff;
+}
+.ab-hero-btn {
+  position: absolute;
+  left: 1149px;
+  top: 684px;
+  width: 257px;
+  height: 70px;
+  padding-top: 16px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .16);
+  font-family: var(--f-sans);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40.3px;
+  color: #291f1e;
+  text-align: center;
+}
+
+/* ============================================================
+   About band (slate)
+   ============================================================ */
+.ab-slate {
+  position: absolute;
+  left: 0;
+  top: 909px;
+  width: 752px;
+  height: 470px;
+  background: var(--about-blue);
+  border: 1px solid #979797;
+}
+.ab-bar {
+  position: absolute;
+  left: 37px;
+  top: 942px;
+  width: 12px;
+  height: 102px;
+  background: #fff;
+}
+.ab-band-title {
+  position: absolute;
+  left: 130px;
+  top: 946px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 82px;
+  line-height: 103.3px;
+  color: #fff;
+  white-space: nowrap;
+}
+.ab-band-body {
+  position: absolute;
+  left: 61px;
+  top: 1106px;
+  width: 602px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 52px;
+  color: #fff;
+}
+.ab-plan {
+  position: absolute;
+  object-fit: fill;
+  max-width: none;
+}
+.ab-plan--faint { left: 591px;   top: 860px;   width: 835px;   height: 567px; opacity: .1; }
+.ab-plan--solid { left: 711.6px; top: 964.7px; width: 474.7px; height: 322.2px; }
+
+/* ============================================================
+   Featured strip (flattened bitmap)
+   ============================================================ */
+.ab-featured {
+  position: absolute;
+  left: 0;
+  top: 1467px;
+  width: 1391px;
+  height: 587px;
+  object-fit: fill;
+  max-width: none;
+}
+
+/* ============================================================
+   Our DNA (dark band)
+   ============================================================ */
+.ab-dna-bg {
+  position: absolute;
+  left: 0;
+  top: 2094px;
+  width: 1440px;
+  height: 576px;
+  background: var(--dark-07);
+}
+.ab-dna-title {
+  position: absolute;
+  left: 600px;
+  top: 2123px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75.6px;
+  color: #fff;
+  white-space: nowrap;
+}
+.ab-dna-line {
+  position: absolute;
+  left: 846px;
+  top: 2156px;
+  width: 305px;
+  height: 2px;
+  background: var(--gray-150);
+}
+.ab-dna-img {
+  position: absolute;
+  left: 30px;
+  top: 2158px;
+  width: 549px;
+  height: 624px;
+  object-fit: cover;
+  max-width: none;
+}
+.ab-dna-sm {
+  position: absolute;
+  left: 649px;
+  top: 2257px;
+  width: 600px;
+  margin: 0;
+  /* every glyph carries a Figma range override → Outfit (base says Open Sans) */
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.16px;
+  color: var(--gray-200);
+}
+.ab-dna-sm .u {
+  text-decoration: underline;
+  color: var(--gray-150);
+}
+.ab-dna-lg {
+  position: absolute;
+  left: 649px;
+  top: 2352px;
+  width: 650px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35.3px;
+  color: var(--gray-450);
+}
+
+/* chips (Read More / View Case) */
+.ab-chip {
+  position: absolute;
+  width: 170px;
+  height: 45px;
+  padding-top: 11px;
+  background: var(--gray-150);
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.1px;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+.ab-chip--read { left: 627px; top: 2520px; }
+.ab-chip--view { left: 505px; top: 3530px; }
+
+/* ============================================================
+   Selected work
+   ============================================================ */
+.ab-work-title {
+  position: absolute;
+  left: 538px;
+  top: 2896px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75.6px;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.ab-work-line {
+  position: absolute;
+  left: 179px;
+  top: 2933px;
+  width: 305px;
+  height: 2px;
+  background: var(--navy);
+}
+.ab-work-lead {
+  position: absolute;
+  left: 63px;
+  top: 3000px;
+  width: 1171px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.2px;
+  color: var(--navy);
+}
+.ab-work-num {
+  position: absolute;
+  left: 81px;
+  top: 3071px;
+  font-family: var(--f-open);
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 163.4px;
+  color: rgba(16, 20, 32, .1);
+}
+/* rect11 sits under rect10 (Figma child order) */
+.ab-work-img2 {
+  position: absolute;
+  left: 63px;
+  top: 3262px;
+  width: 405px;
+  height: 319px;
+  object-fit: cover;
+  max-width: none;
+}
+.ab-work-img1 {
+  position: absolute;
+  left: 342px;
+  top: 3106px;
+  width: 570px;
+  height: 385px;
+  object-fit: cover;
+  max-width: none;
+}
+.ab-work-h {
+  position: absolute;
+  left: 1027px;
+  top: 3191px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60.5px;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.ab-work-body {
+  position: absolute;
+  left: 963px;
+  top: 3260px;
+  width: 416px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.2px;
+  color: var(--navy);
+}
+
+/* ============================================================
+   Team (flattened bitmap — promo overlays in Figma are hidden)
+   ============================================================ */
+.ab-team {
+  position: absolute;
+  left: 0;
+  top: 3646px;
+  width: 1439px;
+  height: 1608px;
+  object-fit: fill;
+  max-width: none;
+}
+
+/* ============================================================
+   Blogs
+   ============================================================ */
+.ab-blogs-title {
+  position: absolute;
+  left: 51px;
+  top: 5331px;
+  margin: 0;
+  font-family: var(--f-inter);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72.6px;
+  color: #000;
+  white-space: nowrap;
+}
+.ab-blog {
+  position: absolute;
+  top: 5465px;
+  width: 370px;
+  height: 448px;
+}
+.ab-blog.b1 { left: 51px; }
+.ab-blog.b2 { left: 539px; }
+.ab-blog.b3 { left: 1026px; }
+.ab-blog > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 370px;
+  height: 408px;
+  object-fit: cover;
+  max-width: none;
+}
+.ab-tag {
+  position: absolute;
+  left: 17px;
+  top: 24px;
+  width: 73px;
+  height: 26px;
+  padding: 4px 0 0 14px;
+  background: var(--gray-150);
+  font-family: var(--f-open);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.1px;
+  color: #000;
+  white-space: nowrap;
+}
+.ab-cap {
+  position: absolute;
+  left: 17px;
+  top: 351px;
+  width: 336px;
+  height: 97px;
+  background: var(--navy);
+}
+.ab-cap p {
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  width: 303px;
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;                 /* Figma AUTO line height (box 64 = 2×32) */
+  color: #fff;
+  text-align: center;
+}
+
+/* ============================================================
+   Subscribe (flattened bitmap)
+   ============================================================ */
+.ab-subs {
+  position: absolute;
+  left: 78px;
+  top: 5999px;
+  width: 1291px;
+  height: 597px;
+  object-fit: fill;
+  max-width: none;
+}
+
+/* ============================================================
+   Header — about is the page whose nav boxes start at x534
+   with 24/24/26/26 gaps
+   ============================================================ */
+@media (min-width: 1440px) {
+  .nav { left: 534px; }
+  .nav a:first-child { margin-right: -2px; }
+  .nav a[href$="about.html"] { margin-right: -2px; }
+}
+/* above the reference width the header spans the viewport — centre the nav */
+@media (min-width: 1441px) {
+  .nav { left: 50%; transform: translateX(-50%); }
+}
+
+/* ============================================================
+   Responsive — reflow to document flow
+   ============================================================ */
+@media (max-width: 1439px) {
+  .ab-main {
+    height: auto;
+    padding-bottom: 24px;
+  }
+  .ab-sec {
+    display: block;
+    position: relative;
+  }
+
+  /* reset the absolute canvas */
+  .ab-hero-bg,
+  .ab-hero-title,
+  .ab-hero-sub,
+  .ab-hero-btn,
+  .ab-slate,
+  .ab-bar,
+  .ab-band-title,
+  .ab-band-body,
+  .ab-plan,
+  .ab-featured,
+  .ab-dna-bg,
+  .ab-dna-title,
+  .ab-dna-line,
+  .ab-dna-img,
+  .ab-dna-sm,
+  .ab-dna-lg,
+  .ab-chip,
+  .ab-work-title,
+  .ab-work-line,
+  .ab-work-lead,
+  .ab-work-num,
+  .ab-work-img1,
+  .ab-work-img2,
+  .ab-work-h,
+  .ab-work-body,
+  .ab-team,
+  .ab-blogs-title,
+  .ab-blog,
+  .ab-blog > img,
+  .ab-tag,
+  .ab-cap,
+  .ab-cap p,
+  .ab-subs {
+    position: static;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  /* ---------- hero ---------- */
+  .ab-sec--hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 540px;
+    padding: 132px 24px 56px;
+    overflow: hidden;
+  }
+  .ab-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ab-hero-title,
+  .ab-hero-sub,
+  .ab-hero-btn { position: relative; z-index: 1; }
+  .ab-hero-title {
+    font-size: clamp(28px, 6.4vw, 64px);
+    line-height: 1.22;
+  }
+  .ab-hero-title br { display: none; }
+  .ab-hero-sub {
+    margin-top: 20px;
+    font-size: clamp(17px, 3.2vw, 34px);
+    line-height: 1.5;
+  }
+  .ab-hero-btn {
+    align-self: flex-start;
+    width: auto;
+    height: auto;
+    margin-top: 34px;
+    padding: 13px 30px;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  /* ---------- about band ---------- */
+  .ab-sec--about {
+    margin-top: 28px;
+    padding: 46px 24px 42px;
+    background: var(--about-blue);
+  }
+  .ab-slate { display: none; }
+  .ab-bar {
+    position: absolute;
+    left: 24px;
+    top: 52px;
+    width: 8px;
+    height: 56px;
+    background: #fff;
+  }
+  .ab-band-title {
+    padding-left: 26px;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.2;
+  }
+  .ab-band-body {
+    margin-top: 22px;
+    font-size: clamp(17px, 2.6vw, 24px);
+    line-height: 1.62;
+  }
+  .ab-plan--faint { display: none; }
+  .ab-plan--solid {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  /* ---------- featured ---------- */
+  .ab-sec--featured { margin-top: 24px; }
+  .ab-featured {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- dna ---------- */
+  .ab-sec--dna {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 44px 24px 48px;
+    background: var(--dark-07);
+  }
+  .ab-dna-bg { display: none; }
+  .ab-dna-title { order: 1; font-size: clamp(32px, 5.6vw, 48px); line-height: 1.2; }
+  .ab-dna-line { order: 2; display: block; width: min(305px, 60%); height: 2px; margin-top: 14px; background: var(--gray-150); }
+  .ab-dna-img { order: 3; display: block; width: 100%; margin-top: 26px; }
+  .ab-dna-sm { order: 4; margin-top: 24px; font-size: 14px; line-height: 1.6; }
+  .ab-dna-lg { order: 5; margin-top: 16px; font-size: clamp(19px, 3vw, 26px); line-height: 1.5; }
+  .ab-chip--read {
+    order: 6;
+    align-self: flex-start;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 26px;
+    padding: 10px 26px;
+    font-size: 16px;
+  }
+
+  /* ---------- selected work ---------- */
+  .ab-sec--work {
+    display: flex;
+    flex-direction: column;
+    padding: 46px 24px 48px;
+  }
+  .ab-work-title { order: 1; font-size: clamp(32px, 5.6vw, 48px); line-height: 1.2; }
+  .ab-work-line { order: 2; display: block; width: 180px; height: 2px; margin-top: 14px; background: var(--navy); }
+  .ab-work-lead { order: 3; margin-top: 18px; font-size: 15px; line-height: 1.6; }
+  .ab-work-num { order: 4; margin-top: 18px; font-size: 72px; line-height: 1; }
+  .ab-work-img1 { order: 5; display: block; width: 100%; margin-top: 14px; }
+  .ab-work-img2 {
+    order: 6;
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 64%;
+    margin-top: -56px;
+  }
+  .ab-work-h { order: 7; margin-top: 28px; font-size: clamp(28px, 4.6vw, 40px); line-height: 1.25; }
+  .ab-work-body { order: 8; margin-top: 12px; font-size: 15px; line-height: 1.6; }
+  .ab-chip--view {
+    order: 9;
+    align-self: flex-start;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 22px;
+    padding: 10px 26px;
+    font-size: 16px;
+  }
+
+  /* ---------- team ---------- */
+  .ab-sec--team { margin-top: 8px; }
+  .ab-team {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- blogs ---------- */
+  .ab-sec--blogs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+    padding: 46px 24px 8px;
+  }
+  .ab-blogs-title {
+    grid-column: 1 / -1;
+    font-size: clamp(32px, 5.6vw, 48px);
+    line-height: 1.2;
+  }
+  .ab-blog {
+    position: relative;
+    padding-bottom: 46px;
+  }
+  .ab-blog.b1,
+  .ab-blog.b2,
+  .ab-blog.b3 { left: auto; top: auto; }
+  .ab-blog > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 370 / 408;
+    object-fit: cover;
+  }
+  .ab-tag {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    padding: 4px 12px;
+  }
+  .ab-cap {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    padding: 13px 10px;
+  }
+  .ab-cap p {
+    position: static;
+    width: auto;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  /* ---------- subscribe ---------- */
+  .ab-sec--subs { padding-top: 38px; }
+  .ab-subs {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-sec--hero { min-height: 460px; padding-top: 116px; }
+  .ab-sec--about { padding-top: 38px; }
+  .ab-bar { top: 44px; height: 48px; }
+}
+
+@media (max-width: 576px) {
+  .ab-sec--blogs { grid-template-columns: 1fr; }
+  .ab-hero-btn { font-size: 17px; padding: 11px 24px; }
+  .ab-chip--read,
+  .ab-chip--view { font-size: 15px; padding: 9px 22px; }
+  .ab-cap p { font-size: 17px; }
+}
+
+/* ============================================================
+   Above 1440: section backgrounds span the full viewport
+   ============================================================ */
+@media (min-width: 1441px) {
+  /* hero facade photo — full bleed (cover keeps it undistorted) */
+  .ab-hero-bg {
+    left: calc(50% - 50vw);
+    width: 100vw;
+  }
+  /* blue panel reaches the left screen edge; its right edge stays on the sheet */
+  .ab-slate {
+    left: calc(50% - 50vw);
+    width: calc(50vw + 32px);
+  }
+  /* dark “Our DNA” band — full bleed */
+  .ab-dna-bg {
+    left: calc(50% - 50vw);
+    width: 100vw;
+  }
+  /* team band (white/transparent composite) — full bleed, centre-cropped */
+  .ab-team {
+    left: calc(50% - 50vw);
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
+}

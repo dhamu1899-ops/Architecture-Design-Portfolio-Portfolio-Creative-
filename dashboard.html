@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — STACKLY</title>
+<meta name="description" content="STACKLY role based dashboard for users and admins.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dash-page">
+
+<header class="site-header is-solid">
+  <a class="brand" href="index.html" aria-label="STACKLY home">
+    <img class="brand-mark" src="assets/img/download-4-1-103fd8c3.webp" alt="">
+    <span class="brand-name">STACKLY</span>
+  </a>
+
+  <nav class="nav" id="mainNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="about.html">About US</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Protfolio</a>
+    <a href="contact.html">contact</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="head-right">
+    <div class="user-chip">
+      <div class="user-avatar" id="chipAvatar">?</div>
+      <div class="user-meta">
+        <b id="chipName">…</b>
+        <span class="role-pill" id="chipRole">user</span>
+      </div>
+    </div>
+    <button class="btn-logout" id="logoutBtn" type="button">Logout</button>
+  </div>
+</header>
+
+<!-- shown when there is no valid session -->
+<main class="dash-guard" id="dashGuard" hidden>
+  <div>
+    <h1>401</h1>
+    <p>You need to sign in to open the dashboard.</p>
+    <a class="btn-block" href="login.html">Go to login</a>
+  </div>
+</main>
+
+<main class="dash-main" id="dashMain" hidden>
+  <!-- welcome banner -->
+  <section class="dash-hero">
+    <div>
+      <div class="eyebrow" id="heroEyebrow">Welcome back</div>
+      <h1 id="heroTitle">Hello</h1>
+      <p id="heroText"></p>
+    </div>
+    <div class="dash-hero-actions" id="heroActions"></div>
+  </section>
+
+  <!-- stats -->
+  <section class="dash-section">
+    <div class="dash-section-head">
+      <div>
+        <div class="eyebrow">Overview</div>
+        <h2 id="statsTitle">Your numbers</h2>
+      </div>
+    </div>
+    <div class="stat-grid" id="statGrid"></div>
+  </section>
+
+  <!-- middle columns -->
+  <section class="dash-section">
+    <div class="dash-cols">
+      <div class="panel">
+        <h3 id="activityTitle">Recent activity</h3>
+        <ul class="activity" id="activityList"></ul>
+      </div>
+      <div class="panel profile-card">
+        <div class="user-avatar" id="profAvatar">?</div>
+        <div class="p-name" id="profName">…</div>
+        <div class="p-mail" id="profMail">…</div>
+        <div class="profile-rows" id="profRows"></div>
+        <a class="btn-block" href="index.html">Back to website</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- projects / users -->
+  <section class="dash-section" id="projectsSection">
+    <div class="dash-section-head">
+      <div>
+        <div class="eyebrow" id="projEyebrow">Our work</div>
+        <h2 id="projTitle">Projects</h2>
+      </div>
+      <a class="dash-link" href="portfolio.html">View all projects</a>
+    </div>
+    <div class="proj-grid" id="projGrid"></div>
+  </section>
+
+  <!-- admin only -->
+  <section class="dash-section" id="usersSection" hidden>
+    <div class="dash-section-head">
+      <div>
+        <div class="eyebrow">Administration</div>
+        <h2>Registered users</h2>
+      </div>
+      <span class="dash-link" id="usersCount"></span>
+    </div>
+    <div class="table-wrap">
+      <table class="dash-table">
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr>
+        </thead>
+        <tbody id="usersBody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

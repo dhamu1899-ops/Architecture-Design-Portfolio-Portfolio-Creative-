@@ -1,0 +1,359 @@
+/* ============================================================
+   STACKLY — Contact page (Figma frame "contact" 1440 × 2071)
+   Desktop = exact 1440 canvas  →  ≤1200 = reflowed
+   ============================================================ */
+
+.contact-main {
+  position: relative;
+  height: 1641px;              /* footer starts at y1641 */
+}
+
+/* ---------------- heading ---------------- */
+.c-title {
+  position: absolute;
+  left: 505px;
+  top: 187px;
+  width: 489px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 96px;
+  text-align: center;
+  color: #2c2f24;
+}
+.c-sub {
+  position: absolute;
+  left: 478px;
+  top: 317px;
+  width: 545px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #495460;
+}
+
+/* ---------------- form card ---------------- */
+.c-card {
+  position: absolute;
+  left: 41px;
+  top: 437px;
+  width: 797px;
+  height: 588px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2.98px 59.57px rgba(0, 0, 0, .08);
+}
+
+.c-field { position: absolute; display: block; }
+.c-field--name    { left: 40px;  top: 40px;  width: 350px; }
+.c-field--email   { left: 455px; top: 40px;  width: 350px; }
+.c-field--subject { left: 40px;  top: 156px; width: 717px; }
+.c-field--message { left: 40px;  top: 272px; width: 717px; }
+
+.c-lab {
+  display: block;
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2c2f24;
+  margin-bottom: 8px;
+}
+
+.c-field input,
+.c-field textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #dbdfd0;
+  font-family: 'DM Sans', var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2c2f24;
+  outline: none;
+  transition: border-color .2s ease;
+}
+.c-field input { height: 60px; padding: 0 24px; border-radius: 72px; }
+.c-field textarea {
+  height: 156px;
+  padding: 24px;
+  border-radius: 16px;
+  resize: none;
+}
+.c-field input:focus,
+.c-field textarea:focus { border-color: var(--brown); }
+.c-field input::placeholder,
+.c-field textarea::placeholder { color: #737865; opacity: 1; }
+
+.c-send {
+  position: absolute;
+  left: 40px;
+  top: 484px;
+  width: 717px;
+  height: 64px;
+  border: 0;
+  border-radius: 118px;
+  background: var(--brown);
+  font-family: 'DM Sans', var(--f-sans);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.c-send:hover { background: var(--brown-dark); }
+
+/* ---------------- contact information ---------------- */
+.c-info { position: absolute; left: 0; top: 0; width: 100%; }
+.c-info h2 {
+  position: absolute;
+  left: 903px;
+  top: 569px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25.2px;
+  color: #000;
+}
+
+.ci-item { position: absolute; left: 0; width: 100%; }
+.ci-item--email  { top: 608px; }
+.ci-item--phone  { top: 680px; }
+.ci-item--office { top: 768px; }
+
+.ci-icon { position: absolute; }
+.ci-item--email  .ci-icon { left: 874px; top: 0;    width: 18px; height: 17px; }
+.ci-item--phone  .ci-icon { left: 878px; top: 1px;  width: 15px; height: 15px; }
+.ci-item--office .ci-icon { left: 880px; top: 0;    width: 11px; height: 15px; }
+
+.ci-label {
+  position: absolute;
+  left: 903px;
+  top: 0;
+  font-family: var(--f-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 14px;
+  color: #000;
+}
+
+.ci-box {
+  position: absolute;
+  left: 903px;
+  top: 22px;
+  width: 314px;
+  height: 33px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dbdfd0;
+  font-family: var(--f-barlow);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #000;
+}
+.ci-box--email { padding-left: 6px; }
+.ci-box--phone { padding-left: 24px; }
+
+.ci-addr {
+  position: absolute;
+  left: 903px;
+  font-family: var(--f-barlow);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #000;
+}
+.ci-addr--1 { top: 29px; color: rgba(0, 0, 0, .8); }
+.ci-addr--2 { top: 49px; }
+
+/* ---------------- consent ---------------- */
+.c-consent {
+  position: absolute;
+  left: 67px;
+  top: 1070px;
+  width: 642px;
+}
+.c-check {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 35px;
+  height: 34px;
+  border-radius: 6px;
+  background: var(--brown);
+}
+.c-check svg {
+  position: absolute;
+  left: 4px;
+  top: 7.2px;
+  width: 26.9px;
+  height: 19px;
+}
+.c-consent-text {
+  position: absolute;
+  left: 60px;                 /* page x127 = 67 + 60 */
+  top: 1px;
+  width: 582px;
+  margin: 0;
+  font-family: var(--f-lato);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33.6px;
+  letter-spacing: .15px;
+  color: rgba(0, 0, 0, .54);
+}
+.c-consent-text .c-accent { color: var(--brown); }
+.c-consent-text .c-star { font-size: 28px; position: relative; top: 1px; color: var(--brown); }
+
+/* ---------------- map (real interactive OpenStreetMap) ---------------- */
+.c-map {
+  position: absolute;
+  left: 4px;
+  top: 1195px;
+  width: 1440px;
+  height: 390px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* fallback background (static Salem map) shows if the iframe can't load */
+  background: #e9e4dc url("../assets/img/stackly-map.webp") center / cover no-repeat;
+}
+.c-map-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1439px) {
+  .contact-main {
+    height: auto;
+    padding: 56px 24px 64px;
+    box-sizing: border-box;
+  }
+
+  .c-title,
+  .c-sub,
+  .c-card,
+  .c-info,
+  .c-info h2,
+  .ci-item,
+  .ci-icon,
+  .ci-label,
+  .ci-box,
+  .ci-addr,
+  .c-consent,
+  .c-check,
+  .c-consent-text,
+  .c-map {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .c-title {
+    font-size: clamp(44px, 9vw, 72px);
+    line-height: 1.05;
+    text-align: center;
+  }
+  .c-sub {
+    max-width: 545px;
+    margin: 18px auto 0;
+  }
+
+  .c-card {
+    width: 100%;
+    max-width: 797px;
+    height: auto;
+    margin: 40px auto 0;
+    padding: 28px;
+  }
+  .c-field {
+    position: static;
+    display: block;
+    width: 100% !important;
+    margin-bottom: 22px;
+  }
+  .c-field input { height: 54px; }
+  .c-send {
+    position: static;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .c-info {
+    max-width: 797px;
+    margin: 48px auto 0;
+  }
+  .c-info h2 { margin-bottom: 26px; }
+  .ci-item {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 10px;
+    margin-bottom: 26px;
+  }
+  .ci-icon { grid-row: 1; justify-self: start; }
+  .ci-label { grid-row: 1; grid-column: 2; line-height: 1.2; }
+  .ci-box { grid-row: 2; grid-column: 1 / -1; width: 100%; height: 44px; }
+  .ci-box--email { padding-left: 16px; text-align: left; }
+  .ci-box--phone { padding-left: 16px; }
+  .ci-addr { grid-column: 2; }
+  .ci-addr--1 { grid-row: 3; }
+  .ci-addr--2 { grid-row: 4; margin-top: -6px; }
+
+  .c-consent {
+    max-width: 797px;
+    margin: 8px auto 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .c-check { flex: 0 0 auto; margin-top: 6px; }
+  .c-consent-text { font-size: 20px; line-height: 1.4; }
+
+  .c-map {
+    position: relative;
+    display: block;
+    width: calc(100% + 48px);
+    max-width: none;
+    height: 300px;
+    margin: 40px -24px 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .c-card { padding: 20px; }
+  .c-map { height: 220px; }
+}
+
+/* ============================================================
+   Above 1440: map band spans the full viewport
+   ============================================================ */
+@media (min-width: 1441px) {
+  .c-map {
+    left: calc(50% - 50vw);
+    width: 100vw;
+    border-radius: 0;
+  }
+}

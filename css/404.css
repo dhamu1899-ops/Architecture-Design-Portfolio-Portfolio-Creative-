@@ -1,0 +1,172 @@
+/* ============================================================
+   STACKLY — 404 page (Figma frame "error404" 1440 × 1024)
+   Desktop = exact 1440 canvas  →  ≤1200 = reflowed
+   ============================================================ */
+
+.e404 { min-height: 1024px; }
+
+.e404-main {
+  position: relative;
+  height: 1024px;
+}
+
+/* ---------------- decorative shapes ---------------- */
+.e4-rect { position: absolute; display: block; width: 354px; height: 371px; }
+.e4-rect--tan  { left: 474px; top: 248px; background: rgba(153, 104, 48, .30); z-index: 1; }
+.e4-rect--blue { left: 612px; top: 149px; background: rgba(96, 125, 139, .50); z-index: 1; }
+
+.e4-pattern {
+  position: absolute;
+  left: 552px;
+  top: 109px;
+  width: 354px;
+  height: 371px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* ---------------- copy ---------------- */
+.e4-num {
+  position: absolute;
+  left: 579px;
+  top: 430px;
+  width: 296px;
+  margin: 0;
+  font-family: var(--f-lato);
+  font-weight: 700;
+  font-size: 170px;
+  line-height: 50px;
+  color: #fff;
+  z-index: 3;
+}
+
+.e4-title {
+  position: absolute;
+  left: 384px;
+  top: 664px;
+  width: 760px;
+  white-space: nowrap;
+  margin: 0;
+  font-family: var(--f-lato);
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 62.4px;
+  color: rgba(0, 0, 0, .87);
+  z-index: 3;
+}
+
+.e4-sub {
+  position: absolute;
+  left: 231px;
+  top: 742px;
+  width: 996px;
+  margin: 0;
+  font-family: var(--f-lato);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: .3px;
+  color: rgba(0, 0, 0, .87);
+  z-index: 3;
+}
+
+.e4-btn {
+  position: absolute;
+  left: 565px;
+  top: 842px;
+  width: 309px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+  background: #e5d7cb;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .16);
+  font-family: var(--f-lato);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 31.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  z-index: 3;
+  transition: background .2s ease, color .2s ease;
+}
+.e4-btn:hover { background: var(--brown); color: #fff; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1200px) {
+  .e404 { min-height: calc(100vh - 40px); display: flex; align-items: center; }
+
+  .e404-main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 300px 24px 90px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .e4-rect,
+  .e4-pattern,
+  .e4-num,
+  .e4-title,
+  .e4-sub,
+  .e4-btn {
+    position: absolute;
+    left: auto;
+    top: auto;
+  }
+
+  .e4-rect { width: 46vw; height: 48vw; max-width: 300px; max-height: 315px; }
+  .e4-rect--tan  { left: 14%; top: 40px; }
+  .e4-rect--blue { left: 46%; top: 8px; }
+  .e4-pattern {
+    left: 30%;
+    top: -10px;
+    width: 46vw;
+    height: 48vw;
+    max-width: 300px;
+    max-height: 315px;
+  }
+
+  .e4-num {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: clamp(96px, 26vw, 170px);
+    line-height: 1;
+    margin-bottom: 46px;
+  }
+  .e4-title {
+    position: relative;
+    width: auto;
+    white-space: normal;
+    font-size: clamp(28px, 6vw, 52px);
+    line-height: 1.2;
+  }
+  .e4-sub {
+    position: relative;
+    width: auto;
+    max-width: 700px;
+    margin: 18px auto 0;
+    font-size: clamp(18px, 3.4vw, 36px);
+    line-height: 1.5;
+  }
+  .e4-btn {
+    position: relative;
+    width: auto;
+    height: 60px;
+    margin-top: 44px;
+    padding: 0 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  .e404-main { padding-top: 230px; padding-bottom: 70px; }
+  .e4-btn { margin-top: 32px; height: 54px; font-size: 22px; }
+}

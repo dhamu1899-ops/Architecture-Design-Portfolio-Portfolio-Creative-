@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up — STACKLY</title>
+<meta name="description" content="Create your STACKLY account — choose a user or admin role.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="auth-page signup-page">
+
+<a class="auth-close" href="index.html" aria-label="Close and go back to home" title="Close">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 5.3a1 1 0 0 1 1.4 0L12 10.6l5.3-5.3a1 1 0 1 1 1.4 1.4L13.4 12l5.3 5.3a1 1 0 0 1-1.4 1.4L12 13.4l-5.3 5.3a1 1 0 0 1-1.4-1.4L10.6 12 5.3 6.7a1 1 0 0 1 0-1.4z"/></svg>
+</a>
+
+<main class="auth-wrap">
+  <h1 class="auth-title">Sign UP</h1>
+
+  <div class="auth-banner" id="authBanner" hidden role="alert"></div>
+
+  <form class="auth-form" id="signupForm" novalidate>
+    <label class="field-label" for="suEmail">Email</label>
+    <input class="field field-email" id="suEmail" name="email" type="email"
+           placeholder="hello@stackly.in" autocomplete="email" spellcheck="false">
+
+    <label class="field-label label-name" for="suName">Name</label>
+    <div class="field-password field-name" id="suNameWrap">
+      <input id="suName" name="name" type="text"
+             placeholder="********" autocomplete="name">
+      <button type="button" class="eye-toggle" data-eye="suName" aria-label="Show name">
+        <img src="assets/icons/hero-eye-slash.svg" alt="">
+      </button>
+    </div>
+
+    <label class="field-label label-password" for="suPassword">Password</label>
+    <div class="field-password" id="suPasswordWrap">
+      <input id="suPassword" name="password" type="password"
+             placeholder="********" autocomplete="new-password">
+      <button type="button" class="eye-toggle" data-eye="suPassword" aria-label="Show password">
+        <img src="assets/icons/hero-eye-slash.svg" alt="">
+      </button>
+    </div>
+
+    <a class="forget-link" href="#" id="forgetLink">Forget Password ?</a>
+
+    <label class="field-label label-newpw" for="suPassword2">new Password</label>
+    <div class="field-password field-newpw" id="suPassword2Wrap">
+      <input id="suPassword2" name="password2" type="password"
+             placeholder="********" autocomplete="new-password">
+      <button type="button" class="eye-toggle" data-eye="suPassword2" aria-label="Show password">
+        <img src="assets/icons/hero-eye-slash.svg" alt="">
+      </button>
+    </div>
+
+    <span class="field-label label-role" id="roleLabel">Select role</span>
+    <div class="role-row" role="group" aria-labelledby="roleLabel">
+      <button type="button" class="role-box" data-role="user"  aria-pressed="false">User</button>
+      <button type="button" class="role-box" data-role="admin" aria-pressed="false">Admin</button>
+    </div>
+
+    <button class="auth-submit" type="submit">
+      <span class="auth-submit-label">Sign UP</span>
+      <img class="auth-submit-arrow" src="assets/icons/hero-heroicons-mini-arrow-right.svg" alt="">
+    </button>
+  </form>
+
+  <p class="auth-alt">Already have account? <a href="login.html">Login here</a></p>
+</main>
+
+<script src="js/auth.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>

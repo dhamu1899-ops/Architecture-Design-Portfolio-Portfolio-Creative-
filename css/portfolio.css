@@ -1,0 +1,496 @@
+/* ============================================================
+   STACKLY — Portfolio page (Figma frame "portfolio" 1440 × 7103)
+   Desktop = exact 1440 canvas  →  ≤1200 = reflowed
+   ============================================================ */
+
+.pf-main {
+  position: relative;
+  height: 6673px;               /* footer starts at y6673 */
+  --pf-ink: #0f1014;
+  --pf-gray: #828a9d;
+}
+
+/* ============================================================
+   Intro
+   ============================================================ */
+.pf-eyebrow {
+  position: absolute;
+  left: 69px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #000;
+}
+.pf-eyebrow.e1 { top: 257px; }
+.pf-eyebrow.e2 { top: 298px; }
+
+.pf-h1 {
+  position: absolute;
+  left: 69px;
+  top: 364px;
+  width: 1124px;
+  margin: 0;
+  font-family: var(--f-inter);
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: 0.11px;      /* Chrome renders Inter 500 60px 4px narrower over the line */
+  color: var(--pf-ink);
+}
+
+/* ============================================================
+   Hero (STRETCH image, cropped — bleeds off the left edge)
+   ============================================================ */
+.pf-hero {
+  position: absolute;
+  left: -157px;
+  top: 557px;
+  width: 1591px;
+  height: 974px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.pf-hero img {
+  position: absolute;
+  left: 160.65px;
+  top: 0;
+  width: 1430.35px;
+  height: 974px;
+  object-fit: fill;
+}
+
+/* ============================================================
+   Category labels
+   ============================================================ */
+.pf-cats, .pf-clients, .pf-cards, .pf-logos { display: contents; }
+
+.cat {
+  position: absolute;
+  display: block;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 44.8px;
+  text-align: center;
+  color: var(--pf-ink);
+}
+.cat.c1 { left: 114px;  top: 1600px; width: 141px; }
+.cat.c2 { left: 448px;  top: 1600px; width: 157px; }
+.cat.c3 { left: 839px;  top: 1600px; width: 125px; }
+.cat.c4 { left: 1182px; top: 1770px; width: 149px; font-size: 28px; }
+
+/* ============================================================
+   Clients block
+   ============================================================ */
+.pc-h {
+  position: absolute;
+  left: 109px;
+  top: 1754px;
+  width: 200px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 72px;
+  color: var(--pf-ink);
+}
+.pc-lead {
+  position: absolute;
+  left: 109px;
+  top: 1846px;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--pf-ink);
+}
+.pc-view {
+  position: absolute;
+  left: 109px;
+  top: 1874px;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--pf-ink);
+  text-decoration: none;
+}
+.pc-view:hover { text-decoration: underline; }
+
+/* ============================================================
+   Project cards
+   ============================================================ */
+.pf-card { position: absolute; }
+.pf-card figure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.pf-card figure img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: none;             /* inner images are wider than their clip box on purpose */
+}
+.pf-cap {
+  position: absolute;
+  margin: 0;
+  font-family: var(--f-sans);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--pf-ink);
+  white-space: nowrap;
+}
+.pf-sub {
+  position: absolute;
+  margin: 0;
+  font-family: var(--f-inter);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: var(--pf-gray);
+  white-space: nowrap;
+}
+
+/* A — residential section (FIT image, letterboxed vertically) */
+.c-a { left: 39px; top: 1953px; width: 738px; height: 606px; }
+.c-a figure { width: 738px; height: 606px; border-radius: 9px; }
+.c-a figure img { left: 0; top: 17.46px; width: 808px; height: 571.07px; object-fit: fill; }
+.c-a .pf-cap { left: 35px; top: 644px; }
+.c-a .pf-sub { left: 35px; top: 674px; }
+
+/* B — forest lounge (FILL) */
+.c-b { left: 805px; top: 1970px; width: 611px; height: 589px; }
+.c-b figure { width: 611px; height: 589px; }
+.c-b figure img { width: 611px; height: 589px; object-fit: cover; }
+.c-b .pf-cap { left: 0; top: 627px; }
+
+/* C — stone plaza (inner 808px cover, clipped to 658) */
+.c-c { left: 39px; top: 2744px; width: 658px; height: 606px; }
+.c-c figure { width: 658px; height: 606px; }
+.c-c figure img { width: 808px; height: 606px; object-fit: cover; }
+.c-c .pf-cap { left: 0; top: 627px; }
+
+/* D — courtyard drawing (r9 clip, inner 808px cover) */
+.c-d { left: 731px; top: 2744px; width: 670px; height: 606px; }
+.c-d figure { width: 670px; height: 606px; border-radius: 9px; }
+.c-d figure img { width: 808px; height: 606px; object-fit: cover; }
+.c-d .pf-cap { left: 0; top: 627px; }
+.c-d .pf-sub { left: 0; top: 657px; }
+
+/* E — loft (FILL, r8) */
+.c-e { left: 39px; top: 3495px; width: 658px; height: 538px; }
+.c-e figure { width: 658px; height: 538px; border-radius: 8px; }
+.c-e figure img { width: 658px; height: 538px; object-fit: cover; }
+.c-e .pf-cap { left: 6px; top: 559px; }
+
+/* F — commercial (inner framed image, bottom clipped by outer r8 box) */
+.c-f { left: 731px; top: 3495px; width: 670px; height: 538px; }
+.c-f figure { width: 670px; height: 538px; border-radius: 8px; }
+.c-f .f-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 670px;
+  height: 606px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.c-f .f-frame img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 1px frame stroke painted over the image (Figma stroke, image starts at the origin) */
+.c-f .f-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #000;
+  border-radius: 9px;
+  pointer-events: none;
+}
+.c-f .pf-cap { left: 4px; top: 559px; }
+
+/* G — concept model (FILL, square corners) */
+.c-g { left: 18px; top: 4410px; width: 652px; height: 580px; }
+.c-g figure { width: 652px; height: 580px; }
+.c-g figure img { width: 652px; height: 580px; object-fit: cover; }
+.c-g .pf-cap { left: 27px; top: 638px; }
+
+/* H — preparation (1px border frame, r9, inner 808px cover) */
+.c-h { left: 731px; top: 4410px; width: 670px; height: 580px; }
+.c-h figure {
+  width: 670px;
+  height: 580px;
+  border-radius: 9px;
+}
+.c-h figure img { width: 808px; height: 606px; object-fit: cover; }
+.c-h figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #000;
+  border-radius: 9px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.c-h .pf-cap { left: 0; top: 638px; }
+
+/* I — heights study (FILL, r8) */
+.c-i { left: 45px; top: 5176px; width: 652px; height: 535px; }
+.c-i figure { width: 652px; height: 535px; border-radius: 8px; }
+.c-i figure img { width: 652px; height: 535px; object-fit: cover; }
+.c-i .pf-cap { left: 0; top: 569px; }
+
+/* J — project thumbnail (STRETCH identity → fill) */
+.c-j { left: 731px; top: 5176px; width: 670px; height: 535px; }
+.c-j figure { width: 670px; height: 535px; border-radius: 8px; }
+.c-j figure img { width: 670px; height: 535px; object-fit: fill; }
+.c-j .pf-cap { left: 0; top: 569px; }
+
+/* K — drawings (FILL, r8) */
+.c-k { left: 18px; top: 5847px; width: 679px; height: 590px; }
+.c-k figure { width: 679px; height: 590px; border-radius: 8px; }
+.c-k figure img { width: 679px; height: 590px; object-fit: cover; }
+.c-k .pf-cap { left: 0; top: 622px; }
+
+/* L — planning (r9 clip, inner 808px cover) */
+.c-l { left: 731px; top: 5839px; width: 670px; height: 606px; }
+.c-l figure { width: 670px; height: 606px; border-radius: 9px; }
+.c-l figure img { width: 808px; height: 606px; object-fit: cover; }
+.c-l .pf-cap { left: 0; top: 622px; }
+
+/* ============================================================
+   Client logos (identity STRETCH → object-fit: fill)
+   ============================================================ */
+.lg {
+  position: absolute;
+  display: block;
+  object-fit: fill;
+}
+.lg-mc        { left: 125px;  top: 4171px;   width: 128px; height: 37.4px; }
+.lg-biffa     { left: 411px;  top: 4173px;   width: 128px; height: 51.7px; }
+.lg-natwest   { left: 645px;  top: 4173px;   width: 128px; height: 24px; }
+.lg-nhs       { left: 913px;  top: 4173px;   width: 105px; height: 50px; }
+.lg-jl        { left: 1170px; top: 4171px;   width: 128px; height: 29px; }
+.lg-aegon     { left: 125px;  top: 4244px;   width: 128px; height: 49.4px; }
+.lg-accenture { left: 405px;  top: 4242.7px; width: 128px; height: 37.9px; }
+.lg-hsbc      { left: 645px;  top: 4246.5px; width: 128px; height: 34.8px; }
+.lg-trip      { left: 1174px; top: 4245.6px; width: 128px; height: 38.4px; }
+
+/* Aviva: Figma rect transform [[1,0,0],[0,1.4468,-0.2234]]
+   → the image is letterboxed inside its 128×40 box */
+.lg-aviva {
+  left: 897px;
+  top: 4241px;
+  width: 128px;
+  height: 40px;
+  overflow: hidden;
+}
+.lg-aviva img {
+  position: absolute;
+  left: 0;
+  top: 15.44%;
+  width: 100%;
+  height: 69.13%;
+  object-fit: fill;
+}
+
+/* ============================================================
+   Header overrides — portfolio's Contact Us button sits at x1262
+   and the active link is "Protfolio" (shifts "contact" left)
+   ============================================================ */
+@media (min-width: 1440px) {
+  .site-header .btn-nav-contact { right: 72px; top: 42px; }
+  /* this page's Figma renders "Home" at weight 500 (inactive) → nav starts 1px right */
+  .nav { left: 531px; }
+  .nav a[href$="index.html"] { font-weight: 500; }
+  .nav a[href$="portfolio.html"] { margin-left: -3px; margin-right: -2px; }
+}
+/* above the reference width the header spans the viewport — centre the nav */
+@media (min-width: 1441px) {
+  .nav { left: 50%; transform: translateX(-50%); }
+}
+
+/* ============================================================
+   Responsive — reflow to document flow
+   ============================================================ */
+@media (max-width: 1439px) {
+  .pf-main {
+    height: auto;
+    padding: 128px 24px 72px;
+  }
+
+  .pf-eyebrow,
+  .pf-h1,
+  .pf-hero,
+  .cat,
+  .pc-h,
+  .pc-lead,
+  .pc-view,
+  .pf-card,
+  .pf-card figure,
+  .lg,
+  .lg-aviva {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  .pf-eyebrow.e2 { margin-top: 18px; }
+  .pf-h1 {
+    width: auto;
+    margin-top: 32px;
+    font-size: 44px;
+    line-height: 1.18;
+  }
+
+  .pf-hero {
+    width: calc(100% + 48px);
+    height: auto;
+    aspect-ratio: 1591 / 974;
+    margin: 40px -24px 0;
+    border-radius: 0;
+  }
+  .pf-hero img {
+    left: 10.1%;
+    width: 89.9%;
+    height: 100%;
+  }
+
+  .pf-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 48px;
+    margin-top: 44px;
+  }
+  .cat { width: auto; font-size: 26px; }
+
+  .pf-clients { display: block; margin-top: 44px; }
+  .pc-h { width: auto; font-size: 44px; line-height: 1.15; }
+  .pc-lead { margin-top: 14px; }
+  .pc-view { display: inline-block; margin-top: 8px; }
+
+  .pf-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 24px;
+    margin-top: 48px;
+  }
+  .pf-card { width: auto; height: auto; }
+
+  .pf-card figure {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .c-a figure { aspect-ratio: 738 / 606; }
+  .c-b figure { aspect-ratio: 611 / 589; }
+  .c-c figure { aspect-ratio: 658 / 606; }
+  .c-d figure { aspect-ratio: 670 / 606; }
+  .c-e figure { aspect-ratio: 658 / 538; }
+  .c-f figure { aspect-ratio: 670 / 538; }
+  .c-g figure { aspect-ratio: 652 / 580; }
+  .c-h figure { aspect-ratio: 670 / 580; }
+  .c-i figure { aspect-ratio: 652 / 535; }
+  .c-j figure { aspect-ratio: 670 / 535; }
+  .c-k figure { aspect-ratio: 679 / 590; }
+  .c-l figure { aspect-ratio: 670 / 606; }
+
+  .c-f .f-frame { position: absolute; left: 0; top: 0; width: 100%; height: 112.64%; }
+
+  /* images fill their frame responsively */
+  .pf-card figure img,
+  .c-a figure img,
+  .c-c figure img,
+  .c-d figure img,
+  .c-f .f-frame img,
+  .c-h figure img,
+  .c-j figure img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .c-a figure img { object-fit: contain; }   /* Figma FIT */
+  .c-j figure img { object-fit: fill; }      /* Figma STRETCH */
+  .pf-card figure img,
+  .c-c figure img,
+  .c-d figure img,
+  .c-h figure img { object-fit: cover; }
+
+  .pf-cap,
+  .pf-sub {
+    position: static;
+    white-space: normal;
+    margin-top: 12px;
+  }
+  .pf-sub { margin-top: 2px; }
+
+  .pf-logos {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 28px 24px;
+    align-items: center;
+    margin: 8px 0;
+  }
+  .lg {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+  .lg-nhs { max-width: 105px; }
+  .lg-aviva {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 128 / 40;
+  }
+}
+
+@media (max-width: 992px) {
+  .pf-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .pf-h1 { font-size: 34px; }
+  .pf-cards { grid-template-columns: 1fr; }
+  .pc-h { font-size: 36px; }
+}
+
+@media (max-width: 576px) {
+  .pf-main { padding-top: 112px; }
+  .pf-h1 { font-size: 28px; }
+  .cat { font-size: 21px; }
+  .pf-cats { gap: 4px 28px; }
+  .pf-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ============================================================
+   Above 1440: hero image band spans the full viewport
+   ============================================================ */
+@media (min-width: 1441px) {
+  .pf-hero {
+    left: calc(50% - 50vw);
+    right: calc(50% - 50vw);
+    width: auto;
+  }
+  .pf-hero img {
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

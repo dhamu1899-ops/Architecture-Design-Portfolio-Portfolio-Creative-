@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login — STACKLY</title>
+<meta name="description" content="Sign in to your STACKLY account — role based login for users and admins.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="auth-page login-page">
+
+<a class="auth-close" href="index.html" aria-label="Close and go back to home" title="Close">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 5.3a1 1 0 0 1 1.4 0L12 10.6l5.3-5.3a1 1 0 1 1 1.4 1.4L13.4 12l5.3 5.3a1 1 0 0 1-1.4 1.4L12 13.4l-5.3 5.3a1 1 0 0 1-1.4-1.4L10.6 12 5.3 6.7a1 1 0 0 1 0-1.4z"/></svg>
+</a>
+
+<main class="auth-wrap">
+  <h1 class="auth-title">Welcome back</h1>
+  <p class="auth-sub">We’re so excited to see you again!</p>
+
+  <div class="auth-banner" id="authBanner" hidden role="alert"></div>
+
+  <form class="auth-form" id="loginForm" novalidate>
+    <label class="field-label" for="loginEmail">Email</label>
+    <input class="field field-email" id="loginEmail" name="email" type="email"
+           placeholder="example@mail.com" autocomplete="email" spellcheck="false">
+
+    <label class="field-label label-password" for="loginPassword">Password</label>
+    <div class="field-password" id="loginPasswordWrap">
+      <input id="loginPassword" name="password" type="password"
+             placeholder="********" autocomplete="current-password">
+      <button type="button" class="eye-toggle" data-eye="loginPassword" aria-label="Show password">
+        <img src="assets/icons/hero-eye-slash.svg" alt="">
+      </button>
+    </div>
+
+    <a class="forget-link" href="#" id="forgetLink">Forget Password ?</a>
+
+    <ul class="pw-rules" id="pwRules" aria-label="Password requirements">
+      <li data-rule="len">
+        <img class="rule-icon" src="assets/icons/hero-heroicons-solid-x-circle.svg" alt="">
+        <span>Minimum 8 characters</span>
+      </li>
+      <li data-rule="num">
+        <img class="rule-icon" src="assets/icons/hero-heroicons-solid-x-circle.svg" alt="">
+        <span>Must contain at least 1 number</span>
+      </li>
+      <li data-rule="case">
+        <img class="rule-icon" src="assets/icons/hero-heroicons-solid-x-circle.svg" alt="">
+        <span>Must contain at least 1 capital case and 1 small case</span>
+      </li>
+      <li data-rule="sym">
+        <img class="rule-icon" src="assets/icons/hero-heroicons-solid-x-circle.svg" alt="">
+        <span>Must contain at least 1 symbol</span>
+      </li>
+    </ul>
+
+    <span class="field-label label-role" id="roleLabel">Select role</span>
+    <div class="role-row" role="group" aria-labelledby="roleLabel">
+      <button type="button" class="role-box" data-role="user"  aria-pressed="false">user</button>
+      <button type="button" class="role-box" data-role="admin" aria-pressed="false">Admin</button>
+    </div>
+
+    <button class="auth-submit" type="submit">
+      <span class="auth-submit-label">Login</span>
+      <img class="auth-submit-arrow" src="assets/icons/hero-heroicons-mini-arrow-right.svg" alt="">
+    </button>
+  </form>
+
+  <p class="auth-alt">Don’t have account? <a href="signup.html">Register here</a></p>
+</main>
+
+<script src="js/auth.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>

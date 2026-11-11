@@ -1,0 +1,170 @@
+/* ============================================================
+   STACKLY — scroll reveal + hover effects
+   ------------------------------------------------------------
+   The hidden state only exists while `html.anim-ready` is set,
+   which js/animations.js adds after it has collected its
+   targets and pre-revealed everything already inside the first
+   screen. Without JS (or with reduced motion) the page renders
+   exactly as before, so the static layout never changes.
+   ============================================================ */
+
+html.anim-ready [data-anim] {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  transition:
+    opacity .72s cubic-bezier(.22, .61, .36, 1),
+    transform .72s cubic-bezier(.22, .61, .36, 1);
+  transition-delay: var(--anim-delay, 0ms);
+}
+
+html.anim-ready [data-anim].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.anim-ready [data-anim] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Hover effects — section wise
+   (resting state is untouched, only :hover changes anything)
+   ============================================================ */
+
+/* ---- generic pressable / linkable things ---- */
+a, button {
+  transition: color .25s ease, background-color .25s ease,
+              border-color .25s ease, opacity .25s ease,
+              transform .3s ease, box-shadow .3s ease, filter .3s ease;
+}
+
+/* ---- home: elevate cards ---- */
+.elevate-card { transition: transform .4s ease, box-shadow .4s ease; }
+.elevate-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(41, 31, 30, .14); }
+.elevate-card img { transition: transform .6s cubic-bezier(.22, .61, .36, 1); }
+.elevate-card:hover img { transform: scale(1.07); }
+.elevate-card h3 { transition: color .3s ease; }
+.elevate-card:hover h3 { color: var(--brown, #996830); }
+
+/* ---- home: gallery mosaic ---- */
+.gallery .mosaic img { transition: transform .55s cubic-bezier(.22, .61, .36, 1), filter .55s ease; }
+.gallery .mosaic img:hover { transform: scale(1.05); filter: saturate(1.12); z-index: 2; }
+
+/* ---- home: features ---- */
+.feature { transition: transform .35s ease; }
+.feature:hover { transform: translateY(-6px); }
+.feature img { transition: transform .35s ease; }
+.feature:hover img { transform: scale(1.12); }
+
+/* ---- home: stats ---- */
+.stat { transition: transform .35s ease; }
+.stat:hover { transform: translateY(-6px); }
+
+/* ---- cards / articles shared ---- */
+.svc-card img, .proj-hero img, .ab-blog > img {
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+.svc-card:hover img, .proj-hero:hover img { transform: scale(1.06); }
+
+.step { transition: transform .35s ease, background-color .35s ease; }
+.step:hover { transform: translateY(-6px); }
+.step b { transition: color .3s ease; }
+.step:hover b { color: var(--brown, #996830); }
+
+/* ---- text links with an arrow ---- */
+.svc-link, .m-link, .dash-link, .pc-view, .work-all {
+  transition: color .25s ease, transform .3s ease, letter-spacing .3s ease;
+}
+.svc-link:hover, .m-link:hover, .pc-view:hover { transform: translateX(4px); }
+
+/* ---- about page ---- */
+.ab-blog { transition: transform .4s ease, box-shadow .4s ease; }
+.ab-blog:hover { transform: translateY(-8px); box-shadow: 0 22px 44px rgba(7, 15, 31, .16); }
+.ab-blog:hover > img { transform: scale(1.06); }
+.ab-chip { transition: transform .3s ease, background-color .3s ease, color .3s ease; }
+.ab-chip:hover { transform: translateY(-3px); }
+.ab-dna-img img, .ab-work-img1 img, .ab-work-img2 img {
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+.ab-dna-img:hover img, .ab-work-img1:hover img, .ab-work-img2:hover img { transform: scale(1.05); }
+
+/* ---- services page ---- */
+.svc-gitem { transition: transform .4s ease, box-shadow .4s ease; }
+.svc-gitem:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(41, 31, 30, .14); }
+.svc-award { transition: transform .35s ease; }
+.svc-award:hover { transform: translateY(-6px); }
+
+/* ---- portfolio page ---- */
+.pf-card { transition: transform .4s ease, box-shadow .4s ease; }
+.pf-card:hover { transform: translateY(-8px); box-shadow: 0 22px 44px rgba(15, 16, 20, .22); }
+.pf-card img { transition: transform .6s cubic-bezier(.22, .61, .36, 1); }
+.pf-card:hover img { transform: scale(1.06); }
+
+/* ---- contact page ---- */
+.ci-item { transition: transform .3s ease; }
+.ci-item:hover { transform: translateX(6px); }
+.c-card { transition: box-shadow .4s ease; }
+.c-card:focus-within { box-shadow: 0 24px 60px rgba(41, 31, 30, .12); }
+
+/* ---- buttons (all pages) ---- */
+.hero-btn, .elevate-btn, .cta-btn, .work-all, .svc-btn, .e4-btn,
+.auth-submit, .c-send, .btn-nav-contact, .ab-hero-btn {
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease,
+              transform .3s ease, box-shadow .3s ease;
+}
+.hero-btn:hover, .cta-btn:hover, .svc-btn:hover, .e4-btn:hover,
+.auth-submit:hover, .c-send:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(41, 31, 30, .22); }
+.elevate-btn:hover, .ab-hero-btn:hover { transform: translateY(-3px) scale(1.06); }
+
+/* ---- header nav ---- */
+.nav a { position: relative; }
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .3s ease;
+}
+.nav a:hover::after { transform: scaleX(1); }
+
+/* logged-in username chip in the header */
+.nav .nav-user { display: inline-flex; align-items: center; gap: 7px; }
+.nav .nav-user .nu-dot {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  border-radius: 50%;
+  background: var(--brown, #996830);
+  color: #fff;
+  font-family: var(--f-sans, sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.nav .nav-user:hover .nu-dot { transform: scale(1.12); box-shadow: 0 6px 16px rgba(153, 104, 48, .4); }
+.nav .nav-user .nu-name {
+  max-width: 104px;
+  font-size: 18px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- footer ---- */
+.f-social a { transition: background-color .3s ease, color .3s ease, transform .3s ease, border-color .3s ease; }
+.f-col li a { display: inline-block; transition: color .25s ease, transform .25s ease; }
+.f-col li a:hover { color: var(--tan, #c4b5a3); transform: translateX(5px); }
+.f-terms:hover, .f-copy a:hover { color: var(--tan, #c4b5a3); }
